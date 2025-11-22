@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       text = "Det finnes noen rom for tilflukt, men presset ligger fortsatt i bakgrunnen.";
     } else if (v <= 85) {
       text = "Tilflukten fyller mye – kanskje så mye at virkeligheten er lett å utsette.";
-    } else {
+    } else if (v <= 100){
       text = "Nesten all energi går til å være i tilflukten. Virkeligheten blir stående på pause.";
     }
 

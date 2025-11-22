@@ -497,6 +497,13 @@ blockquote {
   order: 1;
 }
 
+/* Kapittel 4 */
+#kapittel-4 .story-media img {
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* Kapittel 5 og 7 – smalere tekstkolonne */
 .story-section--narrow .story-layout {
   grid-template-columns: minmax(0, 1fr);
@@ -622,5 +629,46 @@ blockquote {
 
   .scroll-indicator {
     width: 160px;
+  }
+}
+@media (max-width: 960px) {
+  .hero-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+    gap: 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .hero-nav .logo {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+    padding: 0;
+  }
+
+  .hero-menu li {
+    width: 100%;
+  }
+
+  .hero-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    border-radius: 0.8rem;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .hero-menu a:hover {
+    transform: none;
   }
 }

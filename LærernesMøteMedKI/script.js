@@ -48,18 +48,10 @@ const nav = document.querySelector(".hero-nav");
 const hero = document.querySelector(".hero");
 
 function updateNavBlur() {
-  if (!nav || !hero) return;
-
-  // På store skjermer (f.eks. 32") vil vi unngå at navbar er uklar ved initial last.
-  // Hvis vindusbredde er stor nok og brukeren ikke har scrollet, slå av blur og bruk full opacity.
-  if (window.innerWidth >= 1600 && (window.scrollY === 0)) {
-    nav.style.filter = "none";
-    nav.style.opacity = "1";
-    return;
-  }
+  
 
   const heroRect = hero.getBoundingClientRect();
-
+  /*
   // Når vi fortsatt ser hero (dvs. toppen av hero er ikke langt over skjermen)
   if (heroRect.bottom > 0) {
     // Hvor mye av hero som gjenstår (0–1)
@@ -75,6 +67,7 @@ function updateNavBlur() {
     nav.style.filter = "blur(0px)";
     nav.style.opacity = "1";
   }
+    */
 }
 
 window.addEventListener("scroll", updateNavBlur);

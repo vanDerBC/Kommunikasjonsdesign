@@ -210,7 +210,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 12px 30px rgba(127, 90, 240, 0.5);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .hero-cta:hover,
@@ -384,6 +384,14 @@ article {
   margin-top: var(--space-md);
 }
 
+.chapter-figure--full img {
+  width: 60%;      /* juster: 40–80% alt etter hva du vil */
+  margin: 0 auto;
+  display: block;
+  border-radius: 1rem; /* valgfritt: gjør det penere */
+}
+
+
 .chapter-figure--sticky {
   position: sticky;
   top: 5.5rem;
@@ -513,5 +521,25 @@ article {
 
   .hero-content h1 {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .chapter--split {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chapter-body--text {
+    order: 1;     /* TEKST ØVERST */
+  }
+
+  .chapter-figure {
+    order: 2;     /* BILDE UNDER TEKSTEN */
+    margin-top: 1.5rem; 
+  }
+  .chapter-figure img {
+    width: 100%;
+    border-radius: 1rem;
   }
 }
