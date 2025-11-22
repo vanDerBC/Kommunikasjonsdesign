@@ -91,7 +91,7 @@ body.theme-future {
 
 .hero::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -2;
   /* myk lyseblå radial for dybde */
@@ -110,7 +110,7 @@ body.theme-future {
   backdrop-filter: blur(10px);
   background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.92));
   border-radius: 1000px;
-  padding-inline: 1.25rem;
+  padding-inline: 1.8rem;
   border: 1px solid rgba(15, 23, 42, 0.06);
   box-shadow: 0 8px 30px rgba(2, 6, 23, 0.04);
 }
@@ -479,6 +479,13 @@ blockquote {
 .story-section--image-top .story-media {
   order: -1;
   margin-bottom: 1.5rem;
+}
+
+/* Kapittel 2 */
+#kapittel-2 .story-media img {
+  max-height: 380px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Kapittel 3 – speilvendt layout */
