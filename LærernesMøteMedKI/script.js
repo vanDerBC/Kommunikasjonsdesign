@@ -42,6 +42,38 @@ window.addEventListener("scroll", updateScrollProgress);
 window.addEventListener("resize", updateScrollProgress);
 updateScrollProgress();
 
+// ====== Blur nav based on scroll position (improved version) ======
+
+const nav = document.querySelector(".hero-nav");
+const hero = document.querySelector(".hero");
+
+function updateNavBlur() {
+  if (!nav || !hero) return;
+
+  const heroRect = hero.getBoundingClientRect();
+
+  // Når vi fortsatt ser hero (dvs. toppen av hero er ikke langt over skjermen)
+  if (heroRect.bottom > 0) {
+    // Hvor mye av hero som gjenstår (0–1)
+    const progress = 1.4 - heroRect.bottom / window.innerHeight;
+
+    // Blur øker jevnt mellom 0 og 12px
+    const blurValue = Math.max(0, Math.min(progress * 12, 12));
+
+    nav.style.filter = `blur(${blurValue}px)`;
+    nav.style.opacity = `${1 - progress * 0.4}`;
+  } else {
+    // Når hero er ferdig scrolla bort
+    nav.style.filter = "blur(0px)";
+    nav.style.opacity = "1";
+  }
+}
+
+window.addEventListener("scroll", updateNavBlur);
+window.addEventListener("resize", updateNavBlur);
+updateNavBlur();
+
+
 // IntersectionObserver for kapittel-animasjoner og tema
 const storySections = document.querySelectorAll(".story-section");
 const navLinks = document.querySelectorAll(".hero-menu a");
