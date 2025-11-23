@@ -1,99 +1,140 @@
-// Lesefremdrift i progress-bar
-(function () {
-  const progress = document.querySelector(".reading-progress");
+/* --- SCROLL ANIMASJONER FOR ARTIKLER OG BILDER --- */
+const animatedElements = document.querySelectorAll('article, .image-break');
 
-  function updateProgress() {
-    const scrollTop = window.scrollY || window.pageYOffset;
-    const docHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const value = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-
-    if (progress) {
-      progress.value = value;
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
     }
-  }
-
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("resize", updateProgress);
-  updateProgress();
-})();
-
-// Scrollytelling: aktivt kapittel + tema + kapittelnavn
-(function () {
-  const chapters = document.querySelectorAll(".chapter");
-  const root = document.documentElement;
-  const chapterLabel = document.querySelector("[data-current-chapter]");
-
-  if (!("IntersectionObserver" in window) || !chapters.length) {
-    chapters.forEach((ch) => ch.classList.add("active"));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        chapters.forEach((ch) => ch.classList.remove("active"));
-
-        const target = entry.target;
-        target.classList.add("active");
-
-        const theme = target.getAttribute("data-theme");
-        if (theme) {
-          root.setAttribute("data-theme", theme);
-        }
-
-        const label = target.getAttribute("data-chapter-label");
-        if (chapterLabel && label) {
-          chapterLabel.textContent = label;
-        }
-      });
-    },
-    {
-      threshold: 0.5,
-    }
-  );
-
-  chapters.forEach((ch) => observer.observe(ch));
-})();
-
-// Til toppen-knapp
-(function () {
-  const button = document.querySelector(".back-to-top");
-  if (!button) return;
-
-  button.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
   });
-})();
+}, { threshold: 0.2 });
 
-// Parallax-effekt på bilder i kapittelseksjonene
-(function () {
-  const images = document.querySelectorAll(".chapter-figure img, .hero-figure img");
+animatedElements.forEach(el => observer.observe(el));
 
-  function handleParallax() {
-    const viewportHeight = window.innerHeight;
 
-    images.forEach((img) => {
-      const rect = img.getBoundingClientRect();
-      const imgCenter = rect.top + rect.height / 2;
+/* --- TIDSLINJE NODER OG SCROLL-AKTIVERT ANIMASJON --- */
 
-      // Avstand fra midten av skjermen (justerer parallax-styrke)
-      const distanceFromCenter = imgCenter - viewportHeight / 2;
+// Alle node-elementene
+const nodes = document.querySelectorAll('.timeline-graph .node');
 
-      // Parallax-faktor (jo lavere tall, jo mer subtil effekt)
-      const parallax = distanceFromCenter * -0.05;
+// Selve linjen/timeline-wrapper
+const timeline = document.querySelector('.timeline-graph');
 
-      img.style.transform = `translateY(${parallax}px) scale(1.06)`;
-    });
+// Instruksjonsteksten over grafen
+const timelineText = document.querySelector('.timeline-instruks');
+
+// Plasser nodene jevnt og lag tooltips
+nodes.forEach((node, index) => {
+  const total = nodes.length - 1;
+  const position = (index / total) * 100;
+
+  node.style.left = position + '%';
+
+  // Lag tooltip
+  const tooltip = document.createElement('div');
+  tooltip.className = 'tooltip';
+  tooltip.textContent = node.dataset.year + ": " + node.dataset.text;
+
+  node.appendChild(tooltip);
+});
+
+const fotoTekster = document.querySelectorAll('.foto-tekst');
+
+const fotoObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.2 });
+
+fotoTekster.forEach(f => fotoObserver.observe(f));
+
+
+
+/* --- OBSERVER SOM STARTER TIMELINE-ANIMASJONEN --- */
+const timelineObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+
+      /* 1: Fade inn instruksjonen */
+      if (timelineText) {
+        timelineText.classList.add('visible');
+      }
+
+      /* 2: Start linjeanimasjon */
+      timeline.classList.add('animate');
+
+      /* 3: Nodeanimasjoner i sekvens */
+      nodes.forEach((node, index) => {
+        setTimeout(() => {
+          node.classList.add('animate');
+        }, index * 400); // En node hvert 0.4 sekund
+      });
+
+      // Stopper observer etter første aktivering
+      timelineObserver.unobserve(timeline);
+    }
+  });
+}, { threshold: 0.3 });
+
+timelineObserver.observe(timeline);
+
+/* --- GENERER FLERE RUNER AUTOMATISK --- */
+const runeImages = [
+  "Images/precision.png",
+  "Images/domination.png",
+  "Images/sorcery.png",
+  "Images/resolve.png",
+  "Images/inspiration.png"
+];
+
+const runeContainer = document.getElementById("rune-container");
+
+function createRune() {
+  const rune = document.createElement("div");
+  rune.classList.add("rune");
+
+  // Tilfeldig runeikon
+  rune.style.backgroundImage = `url(${runeImages[Math.floor(Math.random() * runeImages.length)]})`;
+
+  // Tilfeldig størrelse (mer variasjon)
+  const size = Math.floor(Math.random() * 80) + 60; // 60–140px
+  rune.style.width = `${size}px`;
+  rune.style.height = `${size}px`;
+
+  // Bredere spredning over hele skjermen
+  rune.style.top = `${Math.random() * 120 - 10}%`;   // kan gå litt utenfor toppen
+  rune.style.left = `${Math.random() * 120 - 10}%`;  // kan gå litt utenfor venstre kant
+
+  // Raskere animasjoner, mer variasjon
+  rune.style.animationDuration = `${6 + Math.random() * 6}s`; // 6–12s
+
+  // Sett inn i container
+  runeContainer.appendChild(rune);
+}
+
+
+// Generer 18 runer
+for (let i = 0; i < 30; i++) {
+  createRune();
+}
+
+const backToTopBtn = document.getElementById("back-to-top");
+
+// Vis knappen når man scroller ned
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.classList.add("visible");
+  } else {
+    backToTopBtn.classList.remove("visible");
   }
+});
 
-  window.addEventListener("scroll", handleParallax, { passive: true });
-  window.addEventListener("resize", handleParallax);
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
-  handleParallax();
-})();
+  setTimeout(() => {
+    location.reload();
+  }, 2000); // litt delay for smoothe scroll
+});

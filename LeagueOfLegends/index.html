@@ -2,424 +2,157 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>Syvers reise i League of Legends</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syver Saxrud - Esportreise</title>
+
+  <!-- Link til CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
+<button id="back-to-top" title="Til toppen">
+  ↑
+</button>
+
 <body>
-<header class="site-header">
-  <nav class="site-nav" aria-label="Hovednavigasjon">
-    <a href="#top" class="logo">Esportfortelling</a>
-    <ul class="nav-list">
-      <li><a href="#origin">Starten</a></li>
-      <li><a href="#grind">Semiprofflivet</a></li>
-      <li><a href="#future">Fremtiden</a></li>
-    </ul>
-  </nav>
+    <div id="rune-container"></div>
+  <header class="esport-header">
+  <div class="esport-bg"></div>
 
-  <section class="reading-meta" aria-label="Lesefremdrift">
-    <p class="chapter-label">
-      Kapittel:
-      <span data-current-chapter>Hero</span>
-    </p>
-    <progress class="reading-progress" max="100" value="0" aria-label="Lesefremdrift i prosent"></progress>
-  </section>
-</header>
+  <h1 class="esport-title">Level Up: Historien om Syver Saxrud</h1>
 
-<main id="top">
-  <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-title">
-    <header class="hero-header">
-      <p class="hero-tag">League of Legends · Norsk esport</p>
-      <h1 id="hero-title">Fra tilfeldig klikk til esportmentor</h1>
-      <p class="hero-lead">
-        På en sliten gaminglaptop i 2013 lastet Syver ned League of Legends.
-        Det som begynte som nysgjerrighet, ble til en reise gjennom rangeringer, press, ensomhet, lagarbeid – og til slutt: forståelse.
-      </p>
-    </header>
-
-    <section class="hero-layout">
-      <figure class="hero-figure">
-        <img
-          src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80"
-          alt="Gamer foran en PC-skjerm i mørkt rom"
-        >
-        <figcaption>
-          Én installasjon. Ti år med mestring, press og vekst.
-        </figcaption>
-      </figure>
-
-      <section class="hero-text">
-        <p>
-          Over ti år senere spiller Syver fortsatt, men med et helt annet blikk:
-          Han ser ikke bare spillet, men menneskene bak skjermen – inkludert seg selv.
-        </p>
-        <p>
-          Denne scrollytellingen tar deg med gjennom starten, semiprofftilværelsen,
-          overgangen til trener, et esportmiljø i krise – og en fremtid der mental helse og
-          fellesskap står i sentrum.
-        </p>
-        <p class="hero-hint" aria-hidden="true">
-          Scroll ned for å bli med inn i historien ↓
-        </p>
-      </section>
-    </section>
-  </section>
-
-  <!-- KAPITTEL-SEKSJONER -->
-  <section class="chapters" aria-label="Syvers League of Legends-historie">
-
-    <!-- 1: STARTEN -->
-    <section
-      id="origin"
-      class="chapter"
-      data-chapter-label="Det tilfeldige klikket"
-      data-theme="origin"
-    >
-      <header class="chapter-header">
-        <h2>2013: Et tilfeldig klikk</h2>
-        <p class="chapter-tagline">Fra nysgjerrighet til altoppslukende lidenskap</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Da Syver lastet ned League of Legends på en sliten gaminglaptop i 2013,
-            ante han lite om at et tilfeldig klikk skulle forme store deler av livet hans.
-            Det som begynte som ren nysgjerrighet, vokste raskt til en altoppslukende lidenskap.
-          </p>
-          <p>
-            &ndash; Jeg spilte casual lenge, mest for gøy. Men når jeg etter hvert begynte å spille mer for meg selv
-            og ikke bare med venner, så jeg hvor raskt jeg steg i rangering. Det var først da jeg skjønte at jeg hadde
-            noe her, forteller han.
-          </p>
-          <p>
-            Oppmuntring fra mer erfarne spillere førte til at han begynte å ta spillet mer seriøst. Etter hvert ble det
-            faste dager med opptil åtte timer med spilling, personlig trener fra Frankrike – og til slutt som innbytter
-            i norsk førstedivisjon.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1400&q=80"
-            alt="League of Legends-kart på PC-skjerm"
-          >
-          <figcaption>
-            Rangstigning, timer med grinding og de første drømmene om noe mer enn bare et spill.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 2: MILJØ I ENDRING -->
-    <section
-      class="chapter"
-      data-chapter-label="Miljø i endring"
-      data-theme="community"
-    >
-      <header class="chapter-header">
-        <h2>Et miljø i endring</h2>
-        <p class="chapter-tagline">Fra LAN-stemning til giftig atmosfære</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Da Syver startet, var det norske esport-miljøet stort og levende, med LAN, drama og store premiepenger.
-            I dag mener han at stemningen har endret seg.
-          </p>
-          <p>
-            &ndash; Miljøet var mer som en «barnehage» etter hvert. Det ble et ganske giftig miljø, noe som tok bort fra
-            gleden litt, sier han.
-          </p>
-          <p>
-            Likevel var det konkurranseaspektet som drev ham videre. Han likte å se hvor langt han kunne strekke seg.
-          </p>
-          <p>
-            &ndash; Det handlet om å bevise noe ovenfor meg selv, sier han.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=1400&q=80"
-            alt="Publikum og spillere på en esportarena"
-          >
-          <figcaption>
-            Et miljø fullt av energi – men også konflikter, press og giftige holdninger.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 3: SEMIPROFFLIVET -->
-    <section
-      id="grind"
-      class="chapter"
-      data-chapter-label="Semiprofflivet"
-      data-theme="grind"
-    >
-      <header class="chapter-header">
-        <h2>Semiprofflivet på godt og vondt</h2>
-        <p class="chapter-tagline">Når League blir jobb og identitet</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Videre etter videregående startet Syver på folkehøyskole hvor han fortsatt retningen innenfor
-            semiprofesjonell gaming. Dagene gikk i League of Legends fra morgen til kveld.
-          </p>
-          <p>
-            &ndash; En typisk dag kunne være at jeg stod opp, dusjet, spiste frokost, og så var det rett på pc-en
-            resten av dagen. Gjennomsnittlig ble det nok en 8–10 timer om dagen med League, forteller han.
-          </p>
-          <p>
-            Men suksess foran skjermen kom til en pris.
-          </p>
-          <p>
-            &ndash; Jeg hadde lite kontakt med venner og familie. Når jeg hadde en dårlig dag i spillet, følte jeg meg
-            som en dårlig person. Det ble en relativt ensom hverdag og frykten for å feile ble større enn gleden av å
-            lykkes, sier han ærlig.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80"
-            alt="En mørk gamingstasjon med flere skjermer"
-          >
-          <figcaption>
-            Lange dager foran skjermen – og et stadig større press om å prestere.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 4: FRA SPILLER TIL TRENER -->
-    <section
-      class="chapter"
-      data-chapter-label="Fra spiller til trener"
-      data-theme="coach"
-    >
-      <header class="chapter-header">
-        <h2>Fra spiller til trener</h2>
-        <p class="chapter-tagline">Fem voksne babyer og kommunikasjon som nøkkel</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Etter to sesonger som spiller tok Syver steget over i trenerrollen.
-          </p>
-          <p>
-            &ndash; Det var umulig å balansere begge deler. Som trener skal du på en måte ta vare på fem voksne babyer,
-            sier han med et smil. – Men det er også veldig givende. Jeg lærte mer om spillet fra et annet perspektiv.
-          </p>
-          <p>
-            Det viktigste han prøver å lære spillerne sine er kommunikasjon, noe som er avgjørende for å lykkes i spillet.
-          </p>
-          <p>
-            &ndash; Mange vet ikke helt hvordan de skal snakke med hverandre. De har dårligere sosiale antenner, så mye
-            handler om hvordan du sier ting, ikke bare hva du sier, forklarer han.
-          </p>
-          <p>
-            Å lede et lag handler like mye om mennesker som strategi.
-          </p>
-          <p>
-            &ndash; Alle er forskjellige. Noen trenger kjeft, andre trenger støtte. Kommunikasjonen er definitivt det
-            vanskeligste.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1542751371-6d07c5d373d3?auto=format&fit=crop&w=1400&q=80"
-            alt="Trener som instruerer et lag foran PC-skjermer"
-          >
-          <figcaption>
-            Fra mekanikk og microplay til menneskene bak tastaturet.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 5: ESPORTMILJØ I KRISE -->
-    <section
-      class="chapter"
-      data-chapter-label="Esport i krise"
-      data-theme="crisis"
-    >
-      <header class="chapter-header">
-        <h2>Et esportmiljø i krise – men med håp</h2>
-        <p class="chapter-tagline">Ildsjeler, mangel på midler og en ny start</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Syver er tydelig når han snakker om dagens norske esportmiljø.
-          </p>
-          <p>
-            &ndash; I Norge er det helt krise. Det har bevegd seg i helt feil retning. Det finnes ildsjeler som fortsatt
-            holder det gående, men det mangler midler og annerkjennelse, sier han.
-          </p>
-          <p>
-            Han mener likevel at det finnes håp.
-          </p>
-          <p>
-            &ndash; Det har hjulpet at esport nå blir introdusert for unge som en fritidsaktivitet. Det må begynne der.
-            Da kan det bli mer akseptert som en idrett på sikt.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1516031190212-da133013de50?auto=format&fit=crop&w=1400&q=80"
-            alt="Ungdommer som spiller sammen i et rom"
-          >
-          <figcaption>
-            Når esport finnes som fritidsaktivitet, kan det bli mer enn bare skjermtid – det kan bli fellesskap.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 6: LIDENSKAP, STRESS OG FREMTID -->
-    <section
-      class="chapter"
-      data-chapter-label="Lidenskap og press"
-      data-theme="pressure"
-    >
-      <header class="chapter-header">
-        <h2>Lidenskap, stress og fremtid</h2>
-        <p class="chapter-tagline">Mellom hatmeldinger og kjærlighet til spillet</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Syver har kjent på stresset som følger en digital karriere. Hatmeldinger og kritikk på sosiale medier er en
-            realitet som mange spillere må forholde seg til.
-          </p>
-          <p>
-            &ndash; Derfor holder jeg meg unna sosiale medier både før og etter kamper. Lidenskapen i esport er like
-            sterk som i fotball – men presset er annerledes, sier han.
-          </p>
-          <p>
-            Til tross for alt sitter han igjen med verdifull læring.
-          </p>
-          <p>
-            &ndash; Jeg har blitt bedre på å ta imot konstruktiv kritikk, og jeg har lært at det er bedre å prøve og feile
-            enn å ikke prøve i det hele tatt. Esport tar over livet ditt hvis du lar det, men det har også gitt meg
-            utrolig mye, reflekterer han.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80"
-            alt="Gamer som sitter alene i mørkt rom med hodetelefoner"
-          >
-          <figcaption>
-            Bak suksesshistoriene skjuler det seg ofte stress, ensomhet og et massivt prestasjonspress.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 7: FREMTID -->
-    <section
-      id="future"
-      class="chapter"
-      data-chapter-label="Fremtidsplaner"
-      data-theme="future"
-    >
-      <header class="chapter-header">
-        <h2>Blikket fremover: idrettspsykolog og mentaltrener</h2>
-        <p class="chapter-tagline">Å bygge mennesker – ikke bare spillere</p>
-      </header>
-
-      <section class="chapter-layout">
-        <article class="chapter-text">
-          <p>
-            Fremover ser Syver for seg en framtid som idrettspsykolog og mentaltrener – kanskje en av ildsjelene som skal
-            bygge norsk esport fra bunnen av.
-          </p>
-          <p>
-            &ndash; Jeg vil jobbe med unge spillere, hjelpe dem å forstå både spillet og seg selv. Det er der fremtiden
-            ligger. Jeg har sett gjennom årene at e-sport ikke bare er et felt hvor unge kan vise talentene sine, men
-            også kan det være den eneste sosiale arenaen som noen har.
-          </p>
-          <p>
-            I dag spiller han fortsatt – men nå handler det mer om kjærligheten til spillet.
-          </p>
-          <p>
-            &ndash; Jeg spiller i tredjedivisjon med kompiser. Nå spiller jeg for gleden, og ikke for presset.
-            Og det føles ganske bra.
-          </p>
-        </article>
-
-        <figure class="chapter-figure">
-          <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80"
-            alt="Venner som sitter rundt et bord med PC-er"
-          >
-          <figcaption>
-            Fra jag etter rangering til ekte spillglede – og ønsket om å hjelpe neste generasjon.
-          </figcaption>
-        </figure>
-      </section>
-    </section>
-
-    <!-- 8: AVSLUTNING -->
-    <section
-      class="chapter"
-      data-chapter-label="Mer enn et spill"
-      data-theme="closing"
-    >
-      <header class="chapter-header">
-        <h2>Mer enn bare et spill</h2>
-        <p class="chapter-tagline">Esport som livsarena</p>
-      </header>
-
-      <section class="chapter-layout closing-layout">
-        <article class="chapter-text">
-          <p>
-            Over ti år etter at han lastet ned spillet for første gang, har Syver gått fra spiller til mentor,
-            fra frustrasjon til forståelse. Han ser ikke lenger bare på skjermen foran seg – men på menneskene bak den.
-          </p>
-          <p>
-            &ndash; Esport er mer enn bare et spill. Det er lagarbeid, psykologi, og det handler om å vokse som menneske,
-            sier han.
-          </p>
-          <p>
-            Neste kamp handler ikke om poeng eller rangering. Den handler om å bygge noe større – et norsk esportmiljø
-            som igjen kan blomstre. Det kan også være en sentral faktor i de unges fremtid.
-          </p>
-        </article>
-
-        <aside class="chapter-aside">
-          <p class="closing-highlight">
-            Neste kamp handler ikke om KDA – men om mennesker, miljø og muligheter.
-          </p>
-          <button type="button" class="back-to-top">
-            Tilbake til start ↑
-          </button>
-        </aside>
-      </section>
-    </section>
-
-  </section>
-</main>
-
-<footer class="site-footer">
-  <p>
-    Historien om Syvers League of Legends-reise · en scrollytelling-opplevelse om lidenskap, press og vekst.
+  <p class="esport-subtitle">
+    En historie om ambisjon, press og personlig vekst
   </p>
-</footer>
+</header>
+  <main>
+    <section>
+      <!-- BEGYNNELSEN -->
+      <article>
+        <h2>Begynnelsen</h2>
+            <p>Da Syver lastet ned League of Legends på en sliten gaminglaptop i 2013, ante han lite om at et tilfeldig klikk skulle forme store deler av livet hans. Det som begynte som ren nysgjerrighet, vokste raskt til en altoppslukende lidenskap.</p>
+            <p>- Jeg spilte casual lenge, mest for gøy. Men når jeg etter hvert begynte å spille mer for meg selv og ikke bare med venner, så jeg hvor raskt jeg steg i rangering. Det var først da jeg skjønte at jeg hadde noe her, forteller han.</p>
+            <p>Oppmuntring fra mer erfarne spillere førte til at han begynte å ta spillet mer seriøst. Etter hvert ble det faste dager med opptil åtte timer med spilling, personlig trener fra Frankrike, og til slutt som innbytter i norsk førstedivisjon.</p>
+      </article>
 
-<script src="script.js"></script>
+      <div class="image-break" style="background-image:url('Images/IMG_5398.jpeg');"></div>
+        <p class="foto-tekst">Foto: Syver Saxrud</p>
+
+      <!-- MILJØET I ENDRING -->
+      <article>
+        <h2>Et miljø i endring</h2>
+            <p>Da Syver startet, var det norske esport-miljøet stort og levende, med LAN, drama og store premiepenger. I dag mener han at stemningen har endret seg.</p>
+            <p>- Miljøet var mer som en «barnehage» etter hvert. Det ble et ganske giftig miljø, noe som tok bort fra gleden litt, sier han.</p>
+            <p>Likevel var det konkurranseaspektet som drev han videre. Han likte å se hvor langt han kunne strekke seg.</p>
+            <p>- Det handlet om å bevise noe ovenfor meg selv, sier han.</p>
+      </article>
+
+      <div class="image-break" style="background-image:url('Images/lol.jpg');"></div>
+        <p class="foto-tekst">Skjermdump fra League of Legends. Foto: Kristoffer Kristiansen</p>
+
+      <!-- SEMIPROFFLIVET -->
+      <article>
+        <h2>Semiprofflivet på godt og vondt</h2>
+            <p>Videre etter videregående startet Syver på folkehøyskole hvor han fortsatt retningen innenfor semiprofesjonell gaming. Dagene gikk i League of Legends fra morgen til kveld.</p>
+            <p>- En typisk dag kunne være at jeg stod opp, dusjet, spiste frokost, og så var det rett på pc-en resten av dagen. Gjennomsnittlig ble det nok en 8-10 timer om dagen med league, forteller han.</p>
+            <p>Men suksess foran skjermen kom til en pris.</p>
+            <p>- Jeg hadde lite kontakt med venner og familie. Når jeg hadde en dårlig dag i spillet, følte jeg meg som en dårlig person. Det ble en relativt ensom hverdag og frykten for å feile ble større enn gleden av å lykkes, sier han ærlig.</p>
+      </article>
+
+      <div class="image-break" style="background-image:url('Images/computer-3923644.jpg');"></div>
+        <p class="foto-tekst">Foto: ChristianaT. Bildet hentet fra Pixabay. URL: https://pixabay.com/photos/computer-games-gaming-3923644/</p>
+
+
+      <!-- TIL TRENERRROLLEN -->
+      <article>
+        <h2>Fra spiller til trener</h2>
+            <p>Men etter to sesonger som spiller tok Syver steget over i trenerrollen.</p>
+            <p>- Det var umulig å balansere begge deler. Som trener skal du på en måte ta vare på fem voksne babyer, sier han med et smil. - Men det er også veldig givende. Jeg lærte mer om spillet fra et annet perspektiv.</p>
+            <p>Det viktigste han prøver å lære spillerne sine er kommunikasjon, noe som er avgjørende for å lykkes i spillet.</p>
+            <p>- Mange vet ikke helt hvordan de skal snakke med hverandre. De har dårligere sosiale antenner, så mye handler om hvordan du sier ting, ikke bare hva du sier, forklarer han.</p>
+            <p>Å lede et lag handler like mye om mennesker som strategi.</p>
+            <p>- Alle er forskjellige. Noen trenger kjeft, andre trenger støtte. Kommunikasjonen er definitivt det vanskeligste.</p>
+      </article>
+
+      <div class="image-break" style="background-image:url('Images/e-sport.jpg');"></div>
+        <p class="foto-tekst">Foto: NTBscanpix.</p>
+        <p class="foto-tekst">Link: https://www.idrettsforbundet.no/nyheter/2019/idrettsforbundet-har-god-dialog-med-e-sport-miljoene-i-norge/</p>
+
+      <!-- MILJØ I KRISE -->
+      <article>
+        <h2>Et esportmiljø i krise - men med håp</h2>
+            <p>Syver er tydelig når han snakker om dagens norske esportmiljø.</p>
+            <p>- I Norge er det helt krise. Det har bevegd seg i helt feil retning. Det finnes ildsjeler som fortsatt holder det gående, men det mangler midler og annerkjennelse, sier han.</p>
+            <p>Han mener likevel at det finnes håp.</p>
+            <p>- Det har hjulpet at esport nå blir introdusert for unge som en fritidsaktivitet. Det må begynne der. Da kan det bli mer akseptert som en idrett på sikt.</p>
+      </article>
+
+      <!-- ANIMERT TIDSLINJE -->
+      <section class="timeline">
+        <h2>Karrieretidslinje</h2>
+            <p class="timeline-instruks">Hold musepekeren over punktene for å se mer informasjon</p>
+
+        <div class="timeline-graph">
+          <div class="node" data-year="2013" data-text="Lastet ned League of Legends for første gang."></div>
+          <div class="node" data-year="2014-2016" data-text="Rask rangstigning og mer seriøs spilling."></div>
+          <div class="node" data-year="2017" data-text="Startet med personlig trener og 8-10 timer daglig trening."></div>
+          <div class="node" data-year="2018" data-text="Innbytter i norsk førstedivisjon."></div>
+          <div class="node" data-year="2019-2020" data-text="Semiprofesjonell spilling på folkehøyskole."></div>
+          <div class="node" data-year="2021" data-text="Overgang fra spiller til trener."></div>
+          <div class="node" data-year="2022-2024" data-text="Trener for flere lag og fokus på kommunikasjon."></div>
+        </div>
+      </section>
+
+      <!-- LIDENSKAP, STRESS OG FREMTID -->
+      <article>
+        <h2>Lidenskap, stress og fremtid</h2>
+            <p>Syver har kjent på stresset som følger en digital karriere. Hatmeldinger og kritikk på sosiale medier er en realitet som mange spillere må forholde seg til.</p>
+            <p>- Derfor holder jeg meg unna sosiale medier både før og etter kamper. Lidenskapen i esport er like sterk som i fotball, men presset er annerledes, sier han.</p>
+            <p>Til tross for alt, sitter han igjen med verdifull læring.</p>
+            <p>- Jeg har blitt bedre på å ta imot konstruktiv kritikk, og jeg har lært at det er bedre å prøve og feile enn å ikke prøve i det hele tatt. Esport tar over livet ditt hvis du lar det, men det har også gitt meg utrolig mye, reflekterer han.</p>
+      </article>
+
+      <!-- VEIEN VIDERE -->
+      <article>
+        <h2>Veien videre</h2>
+            <p>Fremover ser Syver for seg en framtid som idrettspsykolog og mentaltrener, kanskje en av ildsjelene som skal bygge norsk esport fra bunnen av.</p>
+            <p>- Jeg vil jobbe med unge spillere, hjelpe dem å forstå både spillet og seg selv. Det er der fremtiden ligger. Jeg har sett gjennom årene at e-sport ikke bare er et felt hvor unge kan vise talentene sine, men også kan det være den eneste sosiale arenaen som noen har.</p>
+            <p>I dag spiller han fortsatt, men nå handler det mer om kjærligheten til spillet.</p>
+            <p>- Jeg spiller i tredjedivisjon med kompiser. Nå spiller jeg for gleden, og ikke for presset. Og det føles ganske bra.</p>
+            <p>Over ti år etter at han lastet ned spillet for første gang, har Syver gått fra spiller til mentor, fra frustrasjon til forståelse. Han ser ikke lenger bare på skjermen foran seg, men på menneskene bak den.</p>
+            <p>- Esport er mer enn bare et spill. Det er lagarbeid, psykologi, og det handler om å vokse som menneske, sier han.</p>
+            <p>Neste kamp handler ikke om poeng eller rangering. Den handler om å bygge noe større, et norsk esportmiljø som igjen kan blomstre. Det kan også være en sentral faktor i de unges fremtid.</p>
+      </article>
+    </section>
+  </main>
+  <a href="forside.html#articles" class="back-floating">← Til forsiden</a>
+  <!-- Link til JavaScript -->
+  <script src="script.js"></script>
 </body>
+<footer class="site-footer">
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h3>Om prosjektet</h3>
+      <p>
+        Denne artikkelen er utviklet som en del av et journalistisk og mediefaglig prosjekt.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Rettigheter</h3>
+      <p>
+        Bilder brukt i artikkelen er enten produsert av Syver Saxrud eller hentet fra
+        tilgjengelige presse- og spillressurser.
+      </p>
+      <p>Teksten er skrevet og redigert for et faglig formål.</p>
+      <p>
+        <strong>Denne nettsiden ble generert ved hjelp av kunstig intelligens</strong>
+    </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 - Utviklet som del av et faglig prosjekt.</p>
+  </div>
+</footer>
 </html>

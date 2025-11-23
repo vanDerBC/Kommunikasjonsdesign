@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS-økonomien – interaktiv scroll-fortelling</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Scroll progress -->
+  <div class="progress" id="progress"></div>
+
+  <!-- Flyvende skins bak alt innhold -->
+  <div class="skins-layer" id="skinsLayer" aria-hidden="true"></div>
+
+  <!-- HERO -->
+  <header class="hero scene" id="hero">
+  <div class="hero-bg">
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="kicker">Pixel Millionær</div>
+
+      <h1 class="hero-title">
+        CS-økonomien
+        <span class="hero-title-accent">– fra nysgjerrighet til levebrød</span>
+      </h1>
+
+      <!-- Typewriter / rotating line -->
+      <p class="hero-rotator" aria-live="polite">
+        <span id="rotatingText"></span><span class="cursor">|</span>
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn primary" id="startStoryBtn">
+          Start historien
+        </button>
+      </div>
+      <div class="drop-ticker">
+  <div class="drop-ticker">
+  <div class="drop-track">
+    <!-- sett 1 -->
+    <span class="drop drop-skin"><img src="assets/skins/Redline.png" alt="AK Redline"></span>
+    <span class="drop drop-skin"><img src="assets/skins/Howl.png" alt="Howl"></span>
+    <span class="drop drop-skin"><img src="assets/skins/Medusa.png" alt="Medusa"></span>
+    <span class="drop drop-skin"><img src="assets/skins/Wildlotus.png" alt="Wild Lotus"></span>
+    <span class="drop drop-skin"><img src="assets/skins/kimono.png" alt="Crimson Kimono"></span>
+    <span class="drop drop-skin"><img src="assets/skins/Knife.png" alt="Knife"></span>
+    <span class="drop drop-skin"><img src="assets/skins/Case.png" alt="Case"></span>
+
+    <!-- sett 2 (duplisert for seamless scroll) -->
+    <span class="drop drop-skin"><img src="assets/skins/Redline.png" alt=""></span>
+    <span class="drop drop-skin"><img src="assets/skins/Howl.png" alt=""></span>
+    <span class="drop drop-skin"><img src="assets/skins/Medusa.png" alt=""></span>
+    <span class="drop drop-skin"><img src="assets/skins/Wildlotus.png" alt=""></span>
+    <span class="drop drop-skin"><img src="assets/skins/kimono.png" alt=""></span>
+    <span class="drop drop-skin"><img src="assets/skins/Knife.png" alt=""></span>
+    <span class="drop drop-skin"><img src="assets/skins/Case.png" alt=""></span>
+  </div>
+</div>
+
+
+
+      <!-- live mini-stats i header -->
+      <div class="hero-stats">
+        <div class="stat-pill">
+          <div class="label">Startinventar</div>
+          <div class="value"><span class="count" data-from="0" data-to="500">0</span> kr</div>
+        </div>
+        <div class="stat-pill">
+          <div class="label">VGS-slutt</div>
+          <div class="value"><span class="count" data-from="0" data-to="70000">0</span> kr</div>
+        </div>
+        <div class="stat-pill">
+          <div class="label">Semester-profit</div>
+          <div class="value"><span class="count" data-from="0" data-to="200000">0</span> kr</div>
+        </div>
+      </div>
+    </div>
+
+   
+</header>
+
+
+  <!-- Timeline rail -->
+  <aside class="rail" id="rail">
+    <div class="dot active" data-target="s1"><i></i>Starten</div>
+    <div class="dot" data-target="s2"><i></i>Første handel</div>
+    <div class="dot" data-target="s3"><i></i>Tidlig system</div>
+    <div class="dot" data-target="s4"><i></i>Seriøs trading</div>
+    <div class="dot" data-target="s5"><i></i>Levebrød</div>
+    <div class="dot" data-target="s6"><i></i>Menneskelig side</div>
+    <div class="dot" data-target="s7"><i></i>Nedturer</div>
+    <div class="dot" data-target="s8"><i></i>Krasj & CS2</div>
+    <div class="dot" data-target="s9"><i></i>Læring</div>
+  </aside>
+
+  <main>
+    <section class="scene step" id="s1" data-theme="green" data-map="assets/maps/dust2.jpg">
+      <div class="scene-inner">
+        <div class="chapter">Kapittel 1</div>
+        <h2>Starten – da CS ikke var økonomi, men bare et spill</h2>
+
+       <p>
+  Han var bare en tenåring da han fikk CS:GO av fetteren sin. Ikke fordi noen tenkte at han skulle begynne med trading, men fordi det var et av få spill PC-en hans klarte å kjøre uten å knele. De fleste vennene hans spilte allerede, så CS ble først og fremst en sosial arena – noe de gjorde sammen etter skolen.
+</p>
+
+<p>
+  Maskinen hans var langt fra en ordentlig gaming-PC. Den pep, lagget og hørtes ut som en gammel støvsuger når han åpnet spillet. Men CS kjørte akkurat godt nok til at han kunne bli med på kveldene med venner – ranks, maps, små interne spøker og Teamspeak fullt av latter.
+</p>
+
+<p>
+  I starten var alt helt uskyldig. De spilte for moro skyld, lo av dårlige sprays, kranglet om hvem som glemte defuse kit, og ble oppriktig glade og stolt når noen fikk et bra skin i  case-åpening. Ingen tenkte på markedet. Skins var bare noe pent man kunne få hvis man hadde flaks – ikke noe som betydde penger eller investeringer.
+</p>
+
+<p>
+  Men han hadde med seg en skjult fordel han ikke tenkte over: Han hadde tidligere spilt Team Fortress 2. I TF2 var skins en egen kultur. Der var det vanlig å tenke på sjeldenhet, bytting og verdi. Virtuelle gjenstander hadde en økonomi knyttet til seg – ikke bare fordi de var fine, men fordi andre spillere var villige til å betale for dem.
+</p>
+
+<p>
+  Da han begynte med CS:GO, kjente han igjen den følelsen. Det samme systemet av sjeldenheter, trender og etterspørsel – men langt mer strukturert. CS hadde case-drops, markedshistorikk, float values, patterns og våpen som fungerte som små samlerobjekter. Det appellerte til den delen av ham som likte å forstå systemer.
+</p>
+
+<p>
+  Mens vennene hans så på skins som ren pynt, begynte han å stille spørsmål. Hvorfor var noen blå våpen nesten verdiløse, mens andre blå skins var populære? Hvordan kunne en digital kniv være verdt mer enn en ekte? Og hvorfor steg prisen dramatisk på enkelte våpen selv om de så nesten identiske ut?
+</p>
+
+<p>
+  Han la merke til ting de andre ikke tenkte over. Når et nytt case kom ut, analyserte han hvilke våpen som kom til å bli populære. Når markedet beveget seg, prøvde han å forstå hvorfor. Erfaringen fra TF2 gjorde at han intuitivt oppfattet mønstre i markedet lenge før han visste at han gjorde det.
+</p>
+
+<p>
+  På dette tidspunktet drev han ikke med trading – ikke enda. Det var bare nysgjerrighet. Men hvert case, hvert drop og hver prisbevegelse ga ham mer innsikt i hvordan økonomien fungerte. Uten at han merket det, hadde han startet en reise inn i et marked som senere kom til å prege både hverdagen hans og økonomien hans.
+</p>
+
+<p>
+  For mange var skins bare noe man fikk eller kjøpte for å se kul ut i spillet. For ham var det et puslespill – et system som gradvis la bitene fremfor ham – og som en dag skulle bli levebrødet hans.
+</p>
+
+
+<!-- Kapittel 1: Origin interaksjon (ny blokk, teksten urørt) -->
+<div class="origin-wrap" data-anim="origin1" aria-label="Starten på reisen">
+  
+  <div class="origin-grid">
+    <button class="origin-tile" type="button" data-note="TF2 lærte ham at skins kan ha verdi og sjeldenhet.">
+      <div class="origin-kicker">Bakgrunn</div>
+      <div class="origin-title">Team Fortress 2</div>
+      <div class="origin-sub">Skins som kultur</div>
+    </button>
+
+    <button class="origin-tile" type="button" data-note="CS ble et sosialt sted – gutta, Discord, rang og maps.">
+      <div class="origin-kicker">Miljø</div>
+      <div class="origin-title">Sosial arena</div>
+      <div class="origin-sub">Spill etter skolen</div>
+    </button>
+
+    <div class="origin-center" aria-hidden="true">
+      <div class="case-orb">
+        <img src="assets/skins/case.png" alt="" />
+        <div class="case-ring"></div>
+        <div class="case-spark"></div>
+      </div>
+      <div class="case-caption">Første case-drops</div>
+    </div>
+
+    <button class="origin-tile" type="button" data-note="Case-drops og rare farger trigget nysgjerrigheten hans.">
+      <div class="origin-kicker">Trigger</div>
+      <div class="origin-title">Case-drops</div>
+      <div class="origin-sub">“Hva er sjeldent?”</div>
+    </button>
+
+    <button class="origin-tile" type="button" data-note="Han begynte å stille spørsmål ingen andre brydde seg om.">
+      <div class="origin-kicker">Tankesett</div>
+      <div class="origin-title">Mønster-blikk</div>
+      <div class="origin-sub">Hvorfor verdi?</div>
+    </button>
+  </div>
+
+  <!-- liten tekst-tooltip -->
+  <div class="origin-note" id="originNote" aria-live="polite"></div>
+</div>
+
+        <div class="beats">
+          
+        </div>
+      </div>
+    </section>
+   
+    <section class="scene step" id="s2" data-theme="blue" data-map="assets/maps/mirage.jpg">
+  <div class="scene-inner market2" data-anim="market2">
+
+    <div class="chapter">Kapittel 2</div>
+    <h2>Den første handelen – og det første mønsteret</h2>
+
+    <!-- Fortellende intro (kommer inn i 2 beats) -->
+    <div class="storybeats">
+  <p class="beatline">
+    På videregående begynte han å se et mønster han nesten ikke skjønte at var ekte:
+    <strong>AK Redline</strong> var alltid i omløp, alltid lett å selge – men prisen sprikte hver eneste dag.
+  </p>
+  <p class="beatline faint">
+    Det ble ikke én handel. Det ble en vane.
+    I flere måneder satt han og fulgte med på Redline-priser mellom timer, på kvelden,
+    og så fort han så et billig tilbud visste han at det fantes en dyr kjøper et annet sted.
+  </p>
+</div>
+
+
+    <!-- Market scene -->
+    <div class="market-scene">
+      <!-- Venstre selger -->
+      <div class="market-side">
+        <div class="market-tag rich">“God råd”</div>
+        <div class="market-card rich-card" id="richCard2">
+          <div class="skin-name">AK Redline</div>
+          <div class="price">1 key</div>
+          <div class="sub">Selger billig</div>
+        </div>
+        <div class="seller-note">“Vil bare vite det er solgt.”</div>
+      </div>
+
+      <!-- Midt: handel-linje -->
+      <div class="market-mid">
+        <div class="spread-chip">Arbitrage-vindu</div>
+
+        <div class="trade-track" aria-hidden="true">
+          <img id="tradeSkin2" src="assets/skins/redline.png" alt="" />
+          <div class="track-dots"></div>
+        </div>
+
+        <div class="mini-log" id="miniLog">
+          <!-- JS fyller inn -->
+        </div>
+      </div>
+
+      <!-- Høyre kjøper -->
+      <div class="market-side">
+        <div class="market-tag poor">“Dårlig råd”</div>
+        <div class="market-card poor-card" id="poorCard2">
+          <div class="skin-name">AK Redline</div>
+          <div class="price">2 keys</div>
+          <div class="sub">Selger dyrt</div>
+        </div>
+        <div class="seller-note">“Trenger den nå.”</div>
+      </div>
+    </div>
+
+    <!-- Steg som kommer én og én -->
+    <div class="arb-steps">
+  
+  <!-- STEP 1 -->
+  <div class="arb-step" data-step="1">
+    <div class="arb-num">1</div>
+    <div class="arb-text">
+      <div class="arb-title"><strong>Finne billig-siden</strong></div>
+      <p>
+  Han starter alltid på den “billige nettsiden” av markedet.  
+  Ikke fordi skinet er dårligere, men fordi selgeren vil ha en rask deal — kanskje han trenger penger med én gang, eller rett og slett ikke gidder å vente.  
+  Her utnytter han ikke en prisfeil, men ren menneskelig adferd.
+</p>
+<span class="arb-mini">(typisk lav innkjøpspris)</span>
+
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="arb-step" data-step="2">
+    <div class="arb-num">2</div>
+    <div class="arb-text">
+      <div class="arb-title"><strong>Selge til riktig kjøper</strong></div>
+      <p>
+  Deretter selger han skinet videre til en kjøper som faktisk bryr seg.  
+  Timing er alt — noen vil ha akkurat det skinet, akkurat nå, og betaler gjerne ekstra for å sikre seg det.  
+  Han selger aldri tilfeldig; han selger når etterspørselen er på topp.
+</p>
+<span class="arb-mini">(ofte solgt for høyere markedspris)</span>
+
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="arb-step" data-step="3">
+    <div class="arb-num">3</div>
+    <div class="arb-text">
+      <div class="arb-title"><strong>Gjenta og lær mønsteret</strong></div>
+      <p>
+  En enkelt flip virker liten, men mønsteret er stabilt.  
+  Når han gjentar dette over tid, bygger han verdien jevnt og forutsigbart — helt uten gambling.  
+  Samtidig lærer han hvordan folk reagerer i hype, panikk og utålmodighet. Det er akkurat der profitten ligger.
+</p>
+
+    </div>
+  </div>
+
+</div>
+
+
+   
+
+    <p class="outroline">
+      Det var ikke avansert. Bare <strong>ren observasjon</strong>.
+      Men det var nok til å forstå at markedet ikke er rasjonelt —
+      og at <strong>små gevinster kan bygges opp</strong>.
+    </p>
+
+  </div>
+</section>
+
+
+    <section class="scene step" id="s3" data-theme="orange" data-map="assets/maps/inferno.jpg">
+  <div class="scene-inner chapter3" data-anim="chapter3">
+    <div class="chapter">Kapittel 3</div>
+    <h2>Det tidlige systemet – små summer, men høy læringsverdi</h2>
+
+    <p>
+      Etter Redline-perioden begynte han å skjønne at det ikke bare handlet om ett skin,
+      men om <strong>en metode</strong>. Han var fortsatt ung, fortsatt på videregående,
+      og hadde ikke store penger å rutte med – men han hadde noe viktigere:
+      han hadde sett hvordan markedet oppfører seg når folk er utålmodige, når de blir hypet,
+      og når de bare vil ha en rask trade.
+    </p>
+
+    <p>
+      I starten var alt smått og kaotisk. Han kjøpte litt her, solgte litt der,
+      prøvde seg fram med forskjellige våpen og rare items han egentlig ikke skjønte verdien av ennå.
+      Noen ganger gambla han litt bare for å få fart på starten,
+      men alltid i små mengder – ikke for å bli rik fort,
+      men fordi han lærte raskere når han testet ting i praksis.
+    </p>
+
+    <p>
+      Det ble en slags daglig drill. Ikke et proft system på papiret,
+      men et system som ga ham erfaring i virkeligheten:
+      hvordan folk responderer på prisendringer,
+      hva som svinger fort og hva som er stabilt,
+      og hvordan skins og markedsplasser faktisk fungerer i praksis
+      når du sitter midt i det.
+    </p>
+
+    <!-- LITEN INTERAKTIV “RUTINE-LOOP” -->
+    <div class="routine-wrap" aria-label="Tidlig trading-rutine">
+      
+      <div class="routine-card" data-r="1">
+        <div class="routine-num">1</div>
+        <div class="routine-title">Kjøp smått</div>
+        <div class="routine-text">
+          Han kjøper et lite sett skins han vet er lett å flytte videre.
+          Ingen store bets – bare trygg trening.
+        </div>
+      </div>
+
+      <div class="routine-card" data-r="2">
+        <div class="routine-num">2</div>
+        <div class="routine-title">Flytt til ny konto</div>
+        <div class="routine-text">
+          Skinsene sendes over til en sekundær konto.
+          Det gjorde det enklere å teste markedet uten rot.
+        </div>
+      </div>
+
+      <div class="routine-card" data-r="3">
+        <div class="routine-num">3</div>
+        <div class="routine-title">Trade + observer</div>
+        <div class="routine-text">
+          Han gjør trades, følger responsen, ser hvem som panikker
+          og hvem som betaler hype-pris.
+        </div>
+      </div>
+
+      <div class="routine-card" data-r="4">
+        <div class="routine-num">4</div>
+        <div class="routine-title">Selg med margin</div>
+        <div class="routine-text">
+          Han selger videre for litt mer enn innkjøpet.
+          Små marginer – men konstant læring.
+        </div>
+      </div>
+
+    </div>
+
+    <p>
+      Det viktigste var ikke hvor mye han tjente per trade,
+      men hvor mye han lærte per trade.
+      Han fikk en intuitiv forståelse av markedet som de fleste aldri bygger:
+      at prisene ikke styres av “riktig verdi”, men av mennesker.
+    </p>
+
+    <p>
+      Da han var ferdig med videregående hadde han nesten uten å merke det
+      gått fra et lite startinventar på noen hundrelapper
+      til et lager verdt titusenvis av kroner.
+      Ikke fordi han traff én stor jackpot,
+      men fordi han hadde bygget stein på stein.
+    </p>
+
+    <div class="growth" data-growth="70">
+      <div class="row">
+        <div>Startinventar</div><div>VGS-slutt</div>
+      </div>
+      <div class="bar"><span></span></div>
+      <div class="row end">
+        <div><strong>~500 kr</strong></div><div><strong>60–70k kr</strong></div>
+      </div>
+    </div>
+
+    <div class="beats">
+      <div class="beat">Volatilitet</div>
+      <div class="beat">Menneskelig adferd</div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="scene step" id="s4" data-theme="purple">
+      <div class="scene-inner">
+        <div class="chapter">Kapittel 4</div>
+        <h2>Overgangen til seriøs trading</h2>
+        <p>
+  Howl og Medusa ble de første virkelig store kjøpene hans, og markerer et tydelig skifte i hvordan han tenkte om CS-økonomien. Frem til dette punktet hadde han bygget inventoryet sitt gjennom mindre trades og ved å utnytte enkle prisforskjeller, men disse to skinsene representerte noe helt annet: sjeldenhet, historikk og langsiktige investeringer. Howl var et ikonisk våpen som ikke lenger kunne droppes, og ble derfor mer verdifullt for hvert år. Medusa hadde en tilsvarende status, og gjorde at han for første gang investerte i skins som samlere virkelig brydde seg om.
+  
+  Da han kjøpte disse, gikk han bort fra små flips og over til kapitalplassering i sjeldnere objekter. Han begynte å se på skins som digitale verdigjenstander med begrenset tilgang, og som noe som kunne stige betydelig i verdi over tid dersom man forstod markedet godt nok.
+
+  Det store vendepunktet kom da han solgte Howl for rundt 30 000 kroner. Ikke bare fordi det var en betydelig sum, men fordi det bekreftet for ham at strategien hans fungerte i praksis. Han gikk fra å tjene noen hundrelapper på små trades til å kontrollere verdifulle items som oppførte seg som reelle investeringer. Dette ga ham et nytt perspektiv og motiverte ham til å følge markedet tettere, forutse bevegelser og analysere trends mer systematisk.
+
+  Det var også i denne perioden Kina for alvor kom inn i CS-markedet, noe som endret dynamikken totalt. De kinesiske plattformene, som Buff, førte med seg enorm likviditet og et stort volum av kjøpere som var villige til å betale høye priser for sjeldne skins. Dette økte etterspørselen dramatisk og gjorde markedet både mer lønnsomt og mer uforutsigbart. For ham betydde det at seriøs trading ikke bare var mulig – det ble plutselig en potensiell fulltidsinntekt. Samtidig ble konkurransen hardere, prisene mer volatile, og mulighetene større for dem som tok markedet seriøst.
+
+  Denne fasen ble starten på den profesjonelle delen av reisen hans – der han ikke bare reagerte på markedet, men aktivt forutså det og posisjonerte seg for større gevinster.
+</p>
+<!-- Skin showcase (ny interaksjon, teksten er urørt) -->
+<div class="skin-showcase" aria-label="Skins nevnt i kapittelet">
+  <figure class="skin-card">
+    <img src="assets/skins/howl.png" alt="M4A4 Howl" />
+    <figcaption>
+      <div class="skin-title">M4A4 | Howl</div>
+      <div class="skin-sub">Ikonisk, discontinued, samler-favoritt</div>
+    </figcaption>
+  </figure>
+
+  <figure class="skin-card">
+    <img src="assets/skins/medusa.png" alt="AWP Medusa" />
+    <figcaption>
+      <div class="skin-title">AWP | Medusa</div>
+      <div class="skin-sub">Sjelden, historisk, høy langsiktig verdi</div>
+    </figcaption>
+  </figure>
+</div>
+
+
+
+        <div class="beats">
+          <div class="beat">Float / pattern</div>
+          <div class="beat">Samlere</div>
+          <div class="beat">Kina inn</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene step" id="s5" data-theme="green" data-map="assets/maps/ancient.jpg">
+  <div class="scene-inner chapter5" data-anim="chapter5">
+    <div class="chapter">Kapittel 5</div>
+    <h2>Daglig rutine – da trading ble et levebrød</h2>
+
+    <p>
+      I 2022 var det ikke lenger “gøy å trade litt på siden”. Nå var det ren nødvendighet.
+      Han gikk på to studier og hadde ingen deltidsjobb eller studielån, og måtte betale leie uten støtte hjemmefra.
+      Hvis han ikke tjente nok, gikk ikke hverdagen rundt. Og det var akkurat der tradingen
+      gikk fra hobby til levebrød.
+    </p>
+
+    <p>
+      Han lagde seg en rytme som var nesten brutal i lengden:
+      <strong>skole fra 08–16</strong>, hjem for mat,
+      og så trading til langt over midnatt – ofte <strong>helt til 02</strong>.
+      Det var ikke én uke han “prøvde hardt”.
+      Det var dag etter dag, gjennom et helt semester.
+    </p>
+
+    <p>
+      På dagtid satt han i forelesninger med trade-sider åpne i bakgrunnen.
+      Ikke for å spamme trades, men for å følge markedet i sanntid:
+      små prisdytt, rare spike’s, items som plutselig fikk hype.
+      På kvelden gjorde han jobben:
+      analyserte, kjøpte inn, flyttet, og solgte ut når han traff riktig bølge.
+    </p>
+
+    <p>
+      Det semesteret levde han på trading alene.
+      Ikke “på papiret”, men faktisk: husleie, mat og alt.
+      Han endte på rundt <strong>200 000 kroner</strong> i gevinst,
+      fordi han ble mer analytisk enn han noen gang hadde vært før.
+    </p>
+
+    <!-- Interaktiv RUTINE-LINJE -->
+    <div class="dayline" aria-label="Daglig rutine">
+      <div class="daynode">
+        <div class="daytime">08:00</div>
+        <div class="daylabel">Skole</div>
+        <div class="daysub">Markedet og trading i bakgrunnen</div>
+      </div>
+      <div class="dayarrow">→</div>
+      <div class="daynode">
+        <div class="daytime">16:30</div>
+        <div class="daylabel">Hjem & mat</div>
+        <div class="daysub">Planlegger kveld</div>
+      </div>
+      <div class="dayarrow">→</div>
+      <div class="daynode night">
+        <div class="daytime">16:30–02:00</div>
+        <div class="daylabel">Trading</div>
+        <div class="daysub">Analyse + kjøp + salg</div>
+      </div>
+    </div>
+
+    <p>
+      Han begynte å dele porteføljen sin i to “moduser”.
+      Den ene var <strong>store flips</strong> – sjeldne items med høy risiko,
+      men stor gevinst hvis timingen satt.
+      Den andre var <strong>stabile holdings</strong>,
+      skins han visste ville stige over tid fordi samlere alltid ville ha dem.
+    </p>
+
+    <!-- Interaktiv PORTFOLIO SPLIT -->
+    <div class="portfolio-split" aria-label="Store flips vs holdings">
+      <div class="ps-card flips">
+        <div class="ps-title">Store flips</div>
+        <ul class="ps-list">
+          <li>Sjeldne items med hype</li>
+          <li>Rask kjøp → raskt salg</li>
+          <li>Høy risiko, høy topp</li>
+        </ul>
+      </div>
+      <div class="ps-card holds">
+        <div class="ps-title">Stabile holdings</div>
+        <ul class="ps-list">
+          <li>Langsiktig verdi</li>
+          <li>Samlere driver prisen</li>
+          <li>Lavere risiko, trygg vekst</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>
+      Han fulgte spesielt med på sjeldne investeringer som
+      <strong>Crimson Kimono</strong> og <strong>Wild Lotus</strong>,
+      og han lærte seg å lese hype-bølger fra store profiler som OhnePixel.
+      Samtidig måtte han forstå kinesisk kjøpsmønster og valuta,
+      fordi Kina var blitt en av de største driverne av prisene.
+    </p>
+
+    <p>
+      Litt etter litt ble dette en profesjonell greie.
+      Ikke fordi han “ville flexe skins”,
+      men fordi han hadde bygget en rutine og en metode som faktisk holdt ham flytende.
+    </p>
+
+    
+</section>
+
+
+    <section class="scene step" id="s6" data-theme="blue" data-map="assets/maps/overpass.jpg">
+  <div class="scene-inner chapter6" data-anim="chapter6">
+    <div class="chapter">Kapittel 6</div>
+    <h2>Den menneskelige siden av trading</h2>
+
+    <p>
+      På utsiden så alt profitabelt ut. Men jo større inventoryet ble, desto mer begynte det å
+      påvirke ham på en måte han ikke hadde forventet. Markedet sluttet å være noe han “bare fulgte”.
+      Det ble noe han <em>kjente</em>.
+    </p>
+
+    <p>
+      Når inventory-verdien gikk ned én dag, føltes det som en dårlig dag – uansett om han egentlig ikke
+      hadde solgt noe å hadde en bra dag. Når den gikk opp, var alt lettere. Det var nesten komisk hvor raskt humøret kunne
+      svinge med en graf på en skjerm.
+    </p>
+
+    <!-- Mood meter interaksjon -->
+    <div class="mood-wrap" aria-label="Humør vs inventory">
+      <div class="mood-header">
+        <div class="mood-title">Inventory → Humør</div>
+        <div class="mood-sub">Slik føltes det i praksis</div>
+      </div>
+
+      <div class="mood-meter" role="img" aria-label="Humørmåler som svinger">
+        <div class="mood-track">
+          <div class="mood-zone down">Nedgang = dårlig dag</div>
+          <div class="mood-zone mid">Stille marked</div>
+          <div class="mood-zone up">Oppgang = god dag</div>
+        </div>
+        <div class="mood-needle" id="moodNeedle"></div>
+      </div>
+
+      <div class="mood-cards">
+        <div class="mood-card down">
+          <div class="mood-card-title">Markedet faller</div>
+          <div class="mood-card-text">
+            Føles som tap, selv når det bare er “på papiret”.
+            Tankene spinner: “Burde jeg solgt tidligere?”
+          </div>
+        </div>
+
+        <div class="mood-card up">
+          <div class="mood-card-title">Markedet stiger</div>
+          <div class="mood-card-text">
+            Alt kjennes lettere. Du føler deg “flink” –
+            selv om du ikke gjorde noe nytt i dag.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Dette ble en viktig del av utviklingen hans. Han måtte lære seg å se trading mer modent:
+      ikke knytte identitet til tall, ikke regne “potensiell profitt” som tap,
+      og forstå risiko før han investerte.
+    </p>
+
+    <p>
+      Han innså også at miljøet rundt CS-trading var delt.
+      Det fantes skikkelig flinke og redelige folk – men også mange som utnyttet andre.
+      Det var her han bestemte seg for å ha god etikk, selv når markedet rundt ham ikke hadde det.
+    </p>
+
+    <div class="quote">
+      “Det lønner seg mer å være en god person i lengden.”
+    </div>
+
+    <div class="beats">
+      <div class="beat">Psykologi</div>
+      <div class="beat">Etikk</div>
+      <div class="beat">Modenhet</div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="scene step" id="s7" data-theme="red" data-map="assets/maps/cache.jpg">
+  <div class="scene-inner chapter7" data-anim="chapter7">
+    <div class="chapter">Kapittel 7</div>
+    <h2>Nedturene og risikoen – og hvorfor han klarte seg</h2>
+
+    <p>
+      Selv etter hundrevis av vellykkede trades, kom det dager som brant seg fast.
+      Dager hvor markedet plutselig snudde, hvor hypen døde over natten, eller der en skin
+      han hadde trodd var en sikker investering, falt i verdi uten forvarsel.
+    </p>
+
+    <p>
+      Noen av de tidligste og mest smertefulle tapene var ikke engang hans feil.
+      Det startet med det som alle tradere frykter, men nesten alle opplever før eller siden:
+      <strong>scam</strong>.
+    </p>
+
+    <!-- FLASH-EFFEKT FOR SCAM -->
+    <div class="scam-flash" id="scamFlash7">
+      <div class="scam-msg">SCAMMED</div>
+    </div>
+
+    <p>
+      Hans første kniv, et skin han hadde spart opp til i måneder, forsvant i løpet av noen sekunder.
+      En falsk byttebot, et øyeblikks uoppmerksomhet, og plutselig var den borte.
+      Ikke bare skinet – men motivasjonen. For ett øyeblikk føltes det som hele reisen stoppet.
+    </p>
+
+    <p>
+      Men i ettertid ble det øyeblikket en drivkraft: 
+      <strong>han bestemte seg for å aldri bli en av dem</strong>.
+      Han skulle være den typen trader folk kunne stole på. En som ikke tok snarveier.
+    </p>
+
+    <!-- TAP-LISTE -->
+    <div class="loss-log-wrap">
+      <div class="loss-log-title">Tapt underveis</div>
+      <div class="loss-log" id="lossLog7"></div>
+    </div>
+
+    <p>
+      Selv når han ble mer erfaren, var ikke nedturer til å unngå.
+      Han kunne gjøre alt riktig – analysere markedet, time kjøpene, forstå hypen –
+      og likevel tape 20–30 000 kroner fordi markedet plutselig gjorde det motsatte av forventet.
+      Det lærte ham at CS-økonomien ikke alltid belønner de smarte,
+      men den belønner de som holder hodet kaldt.
+    </p>
+
+    <p>
+      Det var nettopp derfor han overlevde alle svingningene:
+      Han tok tapene som læring, ikke nederlag.
+      Han forstod risikoen før han investerte,
+      og han holdt seg til etikk selv når markedet rundt ham var kaotisk.
+    </p>
+
+    <div class="beats">
+      <div class="beat">Scam</div>
+      <div class="beat">Tap</div>
+      <div class="beat">Mental styrke</div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="scene step" id="s8" data-theme="purple" data-map="assets/maps/anubis.jpg">
+  <div class="scene-inner chapter8" data-anim="chapter8">
+    <div class="chapter">Kapittel 8</div>
+    <h2>Markedskræsjet – et innblikk i moderne CS2-økonomi</h2>
+
+    <!-- LIVE CRASH TICKER -->
+    <div class="crash-ticker big" aria-label="Live market ticker">
+      <div class="crash-track" id="crashTrack8"></div>
+    </div>
+
+    <div class="crash-story no-graph">
+      <!-- Tekst -->
+      <div class="crash-text">
+
+        <p class="cstep" data-cstep="0">
+          Kræsjet kom ikke sakte. Det kom som et rykk. Han våknet midt på natten av rykter,
+          Discord-meldinger og et marked som plutselig begynte å bevege seg i feil retning.
+        </p>
+
+        <p class="cstep" data-cstep="1">
+          På minutter gikk stemningen fra hype til panikk. Items ble dumpet rett ut på laveste pris
+          fordi folk ville være “førstemann ut”, ikke fordi de visste hva som faktisk skjedde.
+        </p>
+
+        <p class="cstep" data-cstep="2">
+          Det var her han gjorde det motsatte av de fleste. I stedet for å selge i hast,
+          begynte han å lete etter spread: hvor var prisforskjellene størst,
+          og hvilke skins ble kastet ut av stress?
+        </p>
+
+        <p class="cstep" data-cstep="3">
+          Mens andre solgte i blinde, kjøpte han rolig i kaoset – og solgte inn i rebounden.
+          På noen timer satt han med 20–30k i profitt, bare fordi han holdt hodet kaldt.
+        </p>
+
+        <p class="cstep" data-cstep="4">
+          Men kræsjet viste også hvor farlig CS2-økonomien har blitt.
+          Markedet er nå tungt styrt av
+          <span class="hotword" data-tip="Buff + kinesiske samlere flytter volum og priser raskt.">kinesisk dominans</span>,
+          enorm
+          <span class="hotword" data-tip="YouTubers, Twitter, ‘må ha nå’-bølger.">massehype</span>
+          og et
+          <span class="hotword" data-tip="Lite innsyn i store aktører, manipulasjon og raske sving.">uregulert system</span>.
+        </p>
+
+        <p class="cstep" data-cstep="5">
+          Etter dette trakk han seg hovedsakelig ut av trading.
+          Ikke fordi det ikke var profitabelt — men fordi spillet hadde begynt å ligne mer på casino enn marked.
+        </p>
+      </div>
+
+      <!-- Sticky MARKEDSTERMINAL -->
+      <aside class="market-terminal" aria-label="Market terminal">
+        <div class="term-head">
+          <div class="term-title">MARKET TERMINAL</div>
+          <div class="term-status" id="termStatus8">STABLE</div>
+        </div>
+
+        <div class="term-body" id="termBody8">
+          <!-- JS fyller med linjer -->
+        </div>
+
+        <div class="term-foot">
+          <div class="term-chip" id="termChip8">waiting for market...</div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- STAMPS som popper inn -->
+ 
+
+    <!-- PANIKK vs ANALYSE -->
+    <div class="panic-split" aria-label="Panikk versus analyse">
+      <div class="panic-card panic">
+        <div class="panic-title">Panikk-selgerne</div>
+        <ul class="panic-list">
+          <li data-pop="p1">Ser rødt → selger alt</li>
+          <li data-pop="p2">Dumper på laveste pris</li>
+          <li data-pop="p3">Følger rykter blindt</li>
+        </ul>
+      </div>
+
+      <div class="panic-card calm">
+        <div class="panic-title">Han som analyserte</div>
+        <ul class="panic-list">
+          <li data-pop="c1">Ser spread → handler rolig</li>
+          <li data-pop="c2">Kjøper der folk dumper</li>
+          <li data-pop="c3">Selger inn i rebound</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="beats">
+      <div class="beat">Kinesisk dominans</div>
+      <div class="beat">Massehype</div>
+      <div class="beat">Uregulert marked</div>
+    </div>
+
+    <!-- tooltip bubble -->
+    <div class="tip" id="tip8" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+    <section class="scene step" id="s9" data-theme="green" data-map="assets/maps/nuke.jpg">
+  <div class="scene-inner chapter9" data-anim="chapter9">
+    <div class="chapter">Kapittel 9</div>
+    <h2>Oppsummering – hva han lærte</h2>
+
+    <p>
+      Når han ser tilbake på hele reisen, var det ikke ett stort “genialt trekk”
+      som gjorde forskjellen. Det var summen av tusen små valg:
+      observasjonene han gjorde på videregående,
+      rutinene han bygde på studiet,
+      og evnen til å holde hodet kaldt når alle andre mistet det.
+    </p>
+
+    <p>
+      Til slutt satt han igjen med tre typer læring.
+      Ikke bare om CS-markedet, men om økonomi og mennesker generelt.
+    </p>
+
+    <!-- LÆRINGS-BOARD -->
+    <div class="lesson-board" aria-label="Læringspunkter">
+      
+      <div class="lesson-col" data-lcol="0">
+        <div class="lesson-head">Økonomi</div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Se på faktisk gevinst</div>
+          <p class="lesson-text">
+            Han lærte å skille mellom ekte penger og “tenkt profit”.
+            Hvis du ikke har solgt, har du ikke tjent.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Ikke jag tapte muligheter</div>
+          <p class="lesson-text">
+            Markedet gir alltid nye sjanser.
+            Å løpe etter den forrige gjør bare at du tar dårligere trades.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Invester bare det du tåler å miste</div>
+          <p class="lesson-text">
+            De store svingningene kom uansett.
+            Han overlevde fordi han aldri var “all-in” på én idé.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="lesson-col" data-lcol="1">
+        <div class="lesson-head">Personlig utvikling</div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Etikk vinner i lengden</div>
+          <p class="lesson-text">
+            Han så nok shady folk til å skjønne én ting:
+            rykte er kapital. Mister du det, mister du alt.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Relasjoner slår “perfekte trades”</div>
+          <p class="lesson-text">
+            De beste mulighetene kom ofte gjennom folk han kunne stole på,
+            ikke tilfeldige prisfeil.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Ikke knytt identitet til inventory</div>
+          <p class="lesson-text">
+            Humøret kan ikke ligge i en graf.
+            Han lærte å være rolig både i oppgang og nedgang.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="lesson-col" data-lcol="2">
+        <div class="lesson-head">Markedskunnskap</div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Analyse slår flaks</div>
+          <p class="lesson-text">
+            Flaks kan gi deg én win.
+            Analyse gir deg hundre.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Sjeldenhet + hype = verdi</div>
+          <p class="lesson-text">
+            Markedet styres av følelser.
+            Når folk vil ha noe nå, betaler de mer enn “logisk”.
+          </p>
+        </div>
+
+        <div class="lesson-card">
+          <div class="lesson-title">Timing er viktigere enn pris</div>
+          <p class="lesson-text">
+            Å kjøpe “billig” betyr ingenting hvis du selger feil uke.
+            Han lærte å vente på riktig bølge.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="closingline">
+      I dag spiller han fortsatt CS, men markedet har blitt for uforutsigbart til å satse stort.
+      Det er fortsatt mulig å tjene — men bare hvis du forstår at dette ikke lenger er et trygt system,
+      og at disiplin betyr mer enn hype.
+    </p>
+
+    <div class="beats">
+      <div class="beat">Disiplin</div>
+      <div class="beat">Etikk</div>
+      <div class="beat">Forstå markedet</div>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="end">
+       Denne nettsiden er delvis generert ved hjelp av kunstig intelligens.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
