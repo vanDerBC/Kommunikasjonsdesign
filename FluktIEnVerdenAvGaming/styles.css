@@ -528,3 +528,36 @@ article {
     font-size: 2.2rem;
   }
 }
+
+/* --- FLYTENDE TILBAKE-TIL-FORSIDEN-KNAPP --- */
+.back-floating {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+
+  background: rgba(20, 27, 40, 0.7);
+  color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,0.15);
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+
+  z-index: 999;
+  transition: 0.25s ease;
+}
+
+/* Hover-effekt */
+.back-floating:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(59,130,246,0.5);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59,130,246,0.35);
+}

@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let text;
 
     if (v <= 15) {
-      text = "Hverdagen føles nesten bare som press – pauser er sjeldne og korte.";
+      text = "Hverdagen føles nesten bare som press - pauser er sjeldne og korte.";
     } else if (v <= 35) {
       text = "Akkurat nå trekker presset litt mer enn pusterommet.";
     } else if (v <= 60) {
       text = "Det finnes noen rom for tilflukt, men presset ligger fortsatt i bakgrunnen.";
     } else if (v <= 85) {
-      text = "Tilflukten fyller mye – kanskje så mye at virkeligheten er lett å utsette.";
+      text = "Tilflukten fyller mye - kanskje så mye at virkeligheten er lett å utsette.";
     } else if (v <= 100){
       text = "Nesten all energi går til å være i tilflukten. Virkeligheten blir stående på pause.";
     }

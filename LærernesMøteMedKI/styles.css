@@ -7,18 +7,18 @@
 }
 
 :root {
-  /* Lighter color scheme with preserved contrast */
-  --bg-default: #f7fafc;
-  --bg-hero-overlay: rgba(6, 182, 212, 0.12);
-  --bg-card: rgba(255, 255, 255, 0.98);
-  --bg-section: #f1f5f9;
-  --text-main: #0f1724;
-  --text-muted: #64748b;
-  --accent: #06b6d4;
-  --accent-soft: rgba(6, 182, 212, 0.12);
+  /* Slightly darker color scheme with preserved contrast */
+  --bg-default: #1a2332;
+  --bg-hero-overlay: rgba(6, 182, 212, 0.15);
+  --bg-card: rgba(30, 41, 59, 0.95);
+  --bg-section: #0f1724;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-soft: rgba(56, 189, 248, 0.15);
   --accent-strong: #0ea5e9;
   --danger: #ef4444;
-  --shadow-soft: 0 18px 40px rgba(2, 6, 23, 0.06);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.4);
   --radius-xl: 1.75rem;
   --radius-lg: 1.25rem;
   --transition-fast: 180ms ease-out;
@@ -36,39 +36,39 @@ body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     sans-serif;
-  background: radial-gradient(circle at top, #ffffff 0%, var(--bg-default) 55%, #e8eef6 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, var(--bg-default) 55%, #0f1724 100%);
   color: var(--text-main);
   line-height: 1.6;
 }
 
-/* Dynamisk bakgrunn basert på data-theme (lette varianter) */
+/* Dynamisk bakgrunn basert på data-theme (mørkere varianter) */
 
 body.theme-nostalgic {
-  background: radial-gradient(circle at top, #ffffff 0%, #f3f7fb 40%, var(--bg-default) 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1e2a3a 40%, var(--bg-default) 100%);
 }
 
 body.theme-student {
-  background: radial-gradient(circle at top, #ffffff 0%, #e6faf6 40%, var(--bg-default) 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1a3028 40%, var(--bg-default) 100%);
 }
 
 body.theme-planning {
-  background: radial-gradient(circle at top, #ffffff 0%, #f1f5f9 40%, var(--bg-default) 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1e2835 40%, var(--bg-default) 100%);
 }
 
 body.theme-kids {
-  background: radial-gradient(circle at top, #ffffff 0%, #eef7ff 40%, #fff7f7 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1e2f48 40%, #1a2332 100%);
 }
 
 body.theme-role {
-  background: radial-gradient(circle at top, #ffffff 0%, #eaf6ff 40%, var(--bg-default) 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1e3248 40%, var(--bg-default) 100%);
 }
 
 body.theme-relearning {
-  background: radial-gradient(circle at top, #ffffff 0%, #e8f6ee 40%, var(--bg-default) 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1a2e24 40%, var(--bg-default) 100%);
 }
 
 body.theme-future {
-  background: radial-gradient(circle at top, #ffffff 0%, #f1f5f9 40%, var(--bg-default) 100%);
+  background: radial-gradient(circle at top, #2d3748 0%, #1e2835 40%, var(--bg-default) 100%);
 }
 
 /* ====== Hero ====== */
@@ -81,12 +81,12 @@ body.theme-future {
   gap: 2.5rem;
   padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
   padding-bottom: 3.5rem;
-  /* Lys blå hero for tydelig, men myk kontrast mot hvit main */
+  /* Mørkere hero med subtil blå kontrast */
   background:
-    linear-gradient(180deg, rgba(14,165,233,0.08) 0%, rgba(6,182,212,0.06) 35%, rgba(6,182,212,0.04) 65%),
-    linear-gradient(135deg, #ffffff 0%, var(--bg-default) 60%);
+    linear-gradient(180deg, rgba(56,189,248,0.12) 0%, rgba(6,182,212,0.08) 35%, rgba(6,182,212,0.06) 65%),
+    linear-gradient(135deg, #2d3748 0%, var(--bg-default) 60%);
   color: var(--text-main);
-  border-bottom: 1px solid rgba(6, 182, 212, 0.08);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .hero::before {
@@ -94,11 +94,11 @@ body.theme-future {
   position: absolute;
   inset: 0;
   z-index: -2;
-  /* myk lyseblå radial for dybde */
-  background: radial-gradient(circle at top, rgba(6,182,212,0.10) 0%, rgba(255,255,255,0.95) 60%);
+  /* myk mørk blå radial for dybde */
+  background: radial-gradient(circle at top, rgba(56,189,248,0.12) 0%, rgba(26,35,50,0.95) 60%);
 }
 
-/* Gjør hero-nav mer "glass" / hvit for lesbarhet på blå bakgrunn */
+/* Mørk glassmorf nav med subtil glow */
 .hero-nav {
   position: sticky;
   top: 0;
@@ -108,11 +108,11 @@ body.theme-future {
   justify-content: space-between;
   padding-bottom: 1.25rem;
   backdrop-filter: blur(10px);
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.92));
+  background: linear-gradient(135deg, rgba(30,41,59,0.90), rgba(26,35,50,0.85));
   border-radius: 1000px;
   padding-inline: 1.8rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.04);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -146,22 +146,22 @@ body.theme-future {
 }
 
 .hero-menu a:hover {
-  border-color: rgba(6, 182, 212, 0.85);
-  background-color: rgba(6, 182, 212, 0.10);
+  border-color: rgba(56, 189, 248, 0.85);
+  background-color: rgba(56, 189, 248, 0.15);
   color: var(--text-main);
   transform: translateY(-1px);
 }
 
 .hero-menu a.is-active {
-  border-color: rgba(6, 182, 212, 0.85);
-  background-color: rgba(6, 182, 212, 0.10);
+  border-color: rgba(56, 189, 248, 0.85);
+  background-color: rgba(56, 189, 248, 0.15);
   color: var(--text-main);
 }
 
 /* Gjør kun første <li> sin lenke aktiv fra start */
 .hero-menu li:first-child a {
-  border-color: rgba(6, 182, 212, 0.85);
-  background-color: rgba(6, 182, 212, 0.10);
+  border-color: rgba(56, 189, 248, 0.85);
+  background-color: rgba(56, 189, 248, 0.15);
   color: var(--text-main);
   transform: translateY(-1px);
 }
@@ -198,10 +198,10 @@ body.theme-future {
 .hero-meta {
   padding: 1.25rem 1.25rem 1rem;
   border-radius: 1.5rem;
-  /* lys bakgrunn som matcher main, men med myk aksent */
+  /* mørk bakgrunn med myk aksent */
   background: radial-gradient(circle at top left, var(--accent-soft), transparent 60%),
     var(--bg-card);
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   color: var(--text-main);
 }
 
@@ -290,7 +290,7 @@ body.theme-future {
   position: absolute;
   inset: -12px;
   border-radius: calc(var(--radius-xl) + 14px);
-  border: 1px dashed rgba(15, 23, 42, 0.06);
+  border: 1px dashed rgba(56, 189, 248, 0.25);
   opacity: 0.55;
   transform: rotate(-3deg);
 }
@@ -310,9 +310,9 @@ body.theme-future {
   z-index: 30;
   padding: 0.9rem 0.95rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.95);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.06);
+  background: rgba(30,41,59,0.90);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
   display: flex;
   flex-direction: column;
@@ -357,12 +357,12 @@ main {
   padding-top: 3rem;
   padding-bottom: 5rem;
 
-  /* hovedområdet skal være klart hvitt og visuelt separert */
-  background: #ffffff;
+  /* mørkere hovedområde med subtil separasjon */
+  background: #0f1724;
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
-  border-top: 1px solid rgba(15, 23, 42, 0.04);
-  box-shadow: 0 -18px 40px rgba(2, 6, 23, 0.04);
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
 }
@@ -415,7 +415,7 @@ article {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   padding: 1.6rem 1.7rem;
-  border: 1px solid rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(56, 189, 248, 0.2);
   box-shadow: var(--shadow-soft);
 }
 
@@ -446,7 +446,7 @@ blockquote {
   background: radial-gradient(circle at top, var(--accent-soft), transparent 70%);
   border-radius: var(--radius-lg);
   padding: 0.3rem;
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   box-shadow: var(--shadow-soft);
 }
 
@@ -546,8 +546,8 @@ blockquote {
     radial-gradient(circle at top left, var(--accent-soft), transparent 60%),
     var(--bg-card);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(6, 182, 212, 0.12);
-  box-shadow: 0 24px 60px rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 24px 60px rgba(56, 189, 248, 0.2);
 }
 
 .story-intro h2,
@@ -575,9 +575,9 @@ blockquote {
 /* ====== Footer ====== */
 
 .page-footer {
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
   padding: 1.8rem clamp(1.5rem, 5vw, 4rem) 2.4rem;
-  background: radial-gradient(circle at top, rgba(255,255,255,0.98), var(--bg-section) 60%);
+  background: radial-gradient(circle at top, rgba(30,41,59,0.95), var(--bg-section) 60%);
 }
 
 .footer-inner {
@@ -589,6 +589,7 @@ blockquote {
   margin: 0.25rem 0;
   font-size: 0.85rem;
   color: var(--text-muted);
+  text-align: center;
 }
 
 /* ====== Responsivitet ====== */
@@ -643,8 +644,8 @@ blockquote {
     text-align: left;
     font-size: 0.9rem;
     border-radius: 0.8rem;
-    background: rgba(255,255,255,0.8);
-    border: 1px solid rgba(0,0,0,0.05);
+    background: rgba(30,41,59,0.8);
+    border: 1px solid rgba(56, 189, 248, 0.25);
   }
 
   .hero-menu a:hover {
@@ -693,4 +694,35 @@ blockquote {
   }
 }
 
+/* --- FLYTENDE TILBAKE-TIL-FORSIDEN-KNAPP --- */
+.back-floating {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
 
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+
+  background: rgba(20, 27, 40, 0.7);
+  color: #e2e8f0;
+  border: 1px solid rgba(255,255,255,0.15);
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+
+  z-index: 999;
+  transition: 0.25s ease;
+}
+
+/* Hover-effekt */
+.back-floating:hover {
+  background: rgba(59, 130, 246, 0.25);
+  border-color: rgba(59,130,246,0.5);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(59,130,246,0.35);
+}
