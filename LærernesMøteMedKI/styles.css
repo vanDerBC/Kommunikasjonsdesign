@@ -301,11 +301,6 @@ body.theme-future {
   color: var(--text-muted);
 }
 
-.hero-nav {
-  will-change: filter, opacity;
-}
-
-
 /* Scroll-indikator */
 
 .scroll-indicator {
@@ -571,13 +566,43 @@ blockquote {
   .hero-nav {
     position: static;
     margin-bottom: 0.5rem;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.2rem;
+    gap: 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
   }
 
   .hero-menu {
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+    padding: 0;
+  }
+
+  .hero-menu li {
+    width: 100%;
+  }
+
+  .hero-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    border-radius: 0.8rem;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .hero-menu a:hover {
+    transform: none;
   }
 
   /* fjern overlap/skygging på mindre skjermer for stabilitet */
@@ -608,17 +633,6 @@ blockquote {
     padding-inline: 1.2rem;
   }
 
-  .hero-nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero-menu {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
   .hero h2 {
     font-size: 2.1rem;
   }
@@ -629,46 +643,5 @@ blockquote {
 
   .scroll-indicator {
     width: 160px;
-  }
-}
-@media (max-width: 960px) {
-  .hero-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 1.2rem;
-    gap: 0.8rem;
-    border-radius: 1.5rem;
-  }
-
-  .hero-nav .logo {
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
-  }
-
-  .hero-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 0.6rem;
-    padding: 0;
-  }
-
-  .hero-menu li {
-    width: 100%;
-  }
-
-  .hero-menu a {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    text-align: left;
-    font-size: 0.9rem;
-    border-radius: 0.8rem;
-    background: rgba(255,255,255,0.8);
-    border: 1px solid rgba(0,0,0,0.05);
-  }
-
-  .hero-menu a:hover {
-    transform: none;
   }
 }
